@@ -1,0 +1,52 @@
+{
+	"needs": {
+		"https": [{
+			"id": 1,
+			"form": [{
+				"title": "Custom HTTPS Request",
+				"type": "object",
+				"required": [
+					"url"
+				],
+				"properties": {
+					"url": {
+						"type": "string",
+						"title": "URL"
+					}
+				},
+				"additionalProperties": {
+					"type": "string"
+				}
+			}]
+		}],
+		"schedule": [{
+			"id": 1,
+			"form": [{
+				"title": "Create Schedule Trigger",
+				"description": "Choose your trigger event",
+				"type": "object",
+				"required": [
+					"schedule"
+				],
+				"properties": {
+					"schedule": {
+						"title": "Schedule",
+						"type": "string",
+						"enum": [
+							"every-hour",
+							"every-day",
+							"every-week",
+							"every-month"
+						],
+						"enumNames": [
+							"Every Hour",
+							"Every Day",
+							"Every Week",
+							"Every Month"
+						]
+					}
+				}
+			}]
+		}]
+	}
+}
